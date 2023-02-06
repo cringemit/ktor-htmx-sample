@@ -1,6 +1,6 @@
-<h1>About</h1>
+<h1>About (More)</h1>
 <p>Lorem ipsum dolor sit amet</p>
 <a href="#"
-   hx-get="/about/more"
+   hx-get="/"
    hx-push-url="true"
->More information</a>
+>Return to main page</a>

@@ -35,7 +35,16 @@ fun Application.configureRouting() {
         }
 
         get("/about") {
-            call.respond(FreeMarkerContent("about.ftl", null))
+        }
+
+        route("/about") {
+            get {
+                call.respond(FreeMarkerContent("about.ftl", null))
+            }
+
+            get("more") {
+                call.respond(FreeMarkerContent("about-more.ftl", null))
+            }
         }
 
         get("/contact") {
