@@ -6,17 +6,24 @@
         <script src="/static/vendor/htmx.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1>Ktor htmx sample</h1>
-        <p>If this text is still here, the layout surrounds the content</p>
+        <header>
+            <nav>
+                <ul hx-push-url="true"
+                    hx-target="#content"
+                >
+                    <li><a href="#" hx-get="/">Home</a></li>
+                    <li><a href="#" hx-get="/about">About</a></li>
+                    <li><a href="#" hx-get="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
         <div id="root"
              hx-target="#content"
-             hx-history-elt="#content"
-             hx-push-url="true"
              hx-swap="innerHtml"
              hx-trigger="load"
              hx-get="${contentUrl}"
         >
-            <div id="content"></div>
+            <div id="content" hx-history-elt></div>
         </div>
     </body>
 </html>

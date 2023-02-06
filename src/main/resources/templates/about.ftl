@@ -1,4 +1,2 @@
-<h1>About</h1>
-<a href="#"
-   hx-get="/"
->Index</a>
+<h2>About</h2>
+<p>Lorem ipsum dolor sit amet</p>
